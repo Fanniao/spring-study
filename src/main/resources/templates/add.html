@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="zh-CN" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>添加学生信息</title>
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/add.css">
+    <script src="/js/jquery-3.5.1.js"></script>
+    <script src="/js/register.js"></script>
+</head>
+<body>
+    <div class="table">
+        <h1>添加学生信息</h1>
+        <form action="/mapper/save" method="post">
+            用户姓名：<input type="text" id="name" name="name" th:value="${student.name}" /><br/>
+            用户成绩：<input type="text" id="score" name="score" th:value="${student.score}" /><br/>
+            用户日期：<input type="date" id="date" name="birthday" th:value="${student.birthday}"><br/>
+            <input type="submit" class="btn" value="提交"/>
+        </form>
+    </div>
+
+    <div class="bg"/>
+</body>
+</html>

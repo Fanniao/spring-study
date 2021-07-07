@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.sun.mapper.StudentMapper">
+    <select id="findAll" resultType="com.sun.entity.Student">
+        select * from test.student
+    </select>
+    <select id="findById" parameterType="java.lang.Long" resultType="com.sun.entity.Student">
+        select * from test.student where id = #{id}
+    </select>
+    <insert id="save" parameterType="com.sun.entity.Student">
+        insert into test.student(name, score, birthday) values (#{name}, #{score}, #{birthday})
+    </insert>
+    <update id="update" parameterType="com.sun.entity.Student">
+        update test.student set name = #{name}, score = #{score}, birthday = #{birthday} where id = #{id}
+    </update>
+    <delete id="delete" parameterType="java.lang.Long">
+        delete from test.student where id = #{id}
+    </delete>
+</mapper>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="zh-CN" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>学生信息展示</title>
+    <link href="/css/main.css" rel="stylesheet">
+    <link href="/css/index.css" rel="stylesheet">
+</head>
+<body>
+    <div class="table">
+        <h1>学生信息</h1>
+        <table>
+            <tr>
+                <th>编号</th>
+                <th>姓名</th>
+                <th>成绩</th>
+                <th>生日</th>
+                <th>操作</th>
+            </tr>
+            <tr th:each="student:${list}">
+                <td th:text="${student.id}"></td>
+                <td th:text="${student.name}"></td>
+                <td th:text="${student.score}"></td>
+                <td th:text="${student.birthday}"></td>
+                <td>
+                    <a th:href="@{/mapper/delete/{id}(id=${student.id})}">删除</a>
+                    <a th:href="@{/mapper/findById/{id}(id=${student.id})}">修改</a>
+                </td>
+            </tr>
+        </table>
+        <a th:href="@{/mapper/add}">添加</a>
+    </div>
+    <div class="bg"/>
+</body>
+</html>

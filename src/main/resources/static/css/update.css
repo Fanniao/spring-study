@@ -1,0 +1,44 @@
+.table {
+    margin: 5% 30% 0;
+}
+
+h1 {
+    text-align: center;
+}
+
+form {
+    text-align: center;
+    margin-top: 20px;
+}
+
+table {
+    text-align: center;
+    margin-left: 27%;
+}
+
+input {
+    width: 200px;
+    margin-bottom: 10px;
+    height: 20px;
+    outline: none;
+    border: 1px solid black;
+}
+
+input:focus {
+    border: 1px solid cyan;
+}
+
+.btn {
+    width: 90px;
+    height: 30px;
+    font-size: 20px;
+    color: #cccccc;
+    background-color: beige;
+    border: 0;
+}
+
+.btn:hover {
+    background-color: #ccc;
+    color: aqua;
+    cursor: pointer;
+}
